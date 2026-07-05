@@ -1,0 +1,88 @@
+export const childSafety = {
+  title: "Child Safety",
+  subtitle: "Standards",
+  effective: "Effective: June 2025  |  App: Wellona  |  Developer: AW Innovate",
+  sections: [
+    {
+      id: "commitment",
+      heading: "Our Commitment",
+      content: "Wellona maintains a zero-tolerance policy against child sexual abuse and exploitation (CSAE) in all forms. These Child Safety Standards apply to all users of the Wellona application — including registered members and wellness consultant experts. This document is published in compliance with Google Play's Child Safety Standards Policy and applicable Indian law, including the Protection of Children from Sexual Offences Act, 2012 (POCSO) and the Information Technology Act, 2000.",
+      highlight: "🚫 Wellona has an absolute zero-tolerance stance on Child Sexual Abuse Material (CSAM) and any content or behaviour that endangers, exploits, or sexualises minors. Any user found engaging in such activity will be immediately reported to law enforcement.",
+    },
+    {
+      id: "prohibited",
+      heading: "1. Prohibited Content & Behaviour",
+      content: "The following are strictly prohibited on Wellona and will result in immediate account termination and law enforcement reporting:",
+      bullets: [
+        "Child Sexual Abuse Material (CSAM): Any content — images, video, text, or audio — that sexually depicts or exploits minors.",
+        "Child Grooming: Building online relationships with a minor to facilitate sexual contact, or exchanging sexual content with a minor.",
+        "Sexualisation of Minors: Any content that portrays, encourages, or promotes the sexual exploitation of children.",
+        "Sextortion: Threatening or blackmailing a minor using real or alleged intimate imagery.",
+        "Child Trafficking: Advertising, soliciting, or facilitating the commercial sexual exploitation of minors.",
+        "Predatory Behaviour: Any inappropriate interaction targeted at a child, including suggestive communication.",
+        "Adult-Themed Content Targeting Minors: Content that appears child-friendly but contains adult, violent, or sexual themes.",
+      ],
+    },
+    {
+      id: "age",
+      heading: "2. Age Restrictions & User Eligibility",
+      content: "Wellona is strictly an 18+ platform. We do not knowingly permit users under the age of 18 to register or use any of our services.",
+      bullets: [
+        "Account registration requires users to confirm they are 18 years of age or older.",
+        "We do not knowingly collect personal information from anyone under 18.",
+        "If we discover a user is under 18, the account is immediately suspended and their data deleted.",
+        "Parents or guardians who discover a minor has used Wellona should contact us immediately at ayaazatom@gmail.com.",
+      ],
+      warning: "⚠️ If you are under 18, please do not use Wellona. This platform is designed exclusively for adults seeking wellness support.",
+    },
+    {
+      id: "reporting",
+      heading: "3. In-App Reporting Mechanism",
+      content: "Wellona provides users with the ability to report child safety concerns directly within the application.",
+      subsections: [
+        { title: "📱 In-App", text: "Tap on any user profile → select \"Report\" → choose \"Child Safety\" as the category." },
+        { title: "📧 Email", text: "Send details to ayaazatom@gmail.com with subject line \"CSAE Report\"." },
+        { title: "📞 Phone", text: "Call +91 98979 51097 (available during business hours)." },
+      ],
+      content2: "All reports are treated with strict confidentiality. We acknowledge receipt within 24 hours and take action within 72 hours of a valid report.",
+    },
+    {
+      id: "response",
+      heading: "4. Our Response to Violations",
+      content: "Upon receiving a report or detecting a violation, Wellona will:",
+      bullets: [
+        "Immediately remove the violating content and disable access to it.",
+        "Suspend or permanently ban the user account involved.",
+        "Preserve evidence and cooperate fully with law enforcement authorities.",
+        "Report to authorities — including the Cyber Crime Cell and NCMEC CyberTipline where applicable.",
+        "Notify the complainant of the action taken (within bounds of applicable law).",
+        "Disclose user identity to law enforcement or a complainant/victim as required under Indian law (POCSO Act, IT Act).",
+      ],
+    },
+    {
+      id: "proactive",
+      heading: "5. Proactive Safety Measures",
+      content: "Wellona employs proactive technical and human review measures to prevent CSAE content:",
+      bullets: [
+        "Automated content moderation to detect and flag potentially harmful content.",
+        "Human review team to assess flagged content and take action.",
+        "Periodic audits of consultant-user interactions for policy compliance.",
+        "Identity verification requirements during expert onboarding.",
+        "Session monitoring capabilities for consultation calls (for safety investigation purposes).",
+      ],
+      content2: "Wellona publishes a monthly compliance report under Rule 4(1)(d) of the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021.",
+    },
+    {
+      id: "legal",
+      heading: "6. Legal Compliance",
+      content: "Wellona complies with all relevant child safety laws and reports violations to regional and national authorities. Applicable laws include:",
+      bullets: [
+        "POCSO Act, 2012 — Protection of Children from Sexual Offences Act.",
+        "IT Act, 2000 — Information Technology Act and IT (Intermediary Guidelines) Rules 2021.",
+        "Bharatiya Nyaya Sanhita, 2023 — successor to the Indian Penal Code.",
+        "NCMEC CyberTipline — International CSAM reporting obligation.",
+      ],
+      content2: "Users who violate child safety laws face criminal prosecution, including under POCSO which carries imprisonment terms of up to life imprisonment for aggravated penetrative sexual assault of a child.",
+    },
+  ],
+};

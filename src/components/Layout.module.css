@@ -1,0 +1,140 @@
+.root { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* ── HEADER ── */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+.headerScrolled {
+  background: rgba(10, 10, 15, 0.92);
+  border-bottom-color: #2A2A36;
+}
+.headerInner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+/* ── LOGO ── */
+.logo { display: flex; align-items: center; gap: 2px; text-decoration: none; }
+.logoW {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700; font-size: 1.5rem;
+  background: linear-gradient(135deg, #FF2BD6, #A43DFF, #2F8FFF);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.logoText {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700; font-size: 1.5rem; color: #FFFFFF;
+}
+
+/* ── NAV ── */
+.nav {
+  display: flex; align-items: center; gap: 4px;
+}
+.navLink {
+  font-size: 0.875rem; font-weight: 500;
+  color: #B8B8C7;
+  padding: 6px 12px; border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+}
+.navLink:hover { color: #FFFFFF; background: #1B1B24; }
+.navLinkActive {
+  color: #FFFFFF;
+  background: #1B1B24;
+  position: relative;
+}
+.navLinkActive::after {
+  content: '';
+  position: absolute; bottom: -1px; left: 12px; right: 12px;
+  height: 2px;
+  background: linear-gradient(90deg, #FF2BD6, #A43DFF, #2F8FFF);
+  border-radius: 2px;
+}
+
+/* ── HAMBURGER ── */
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer;
+  padding: 8px;
+}
+.bar {
+  display: block; width: 22px; height: 2px;
+  background: #B8B8C7; border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.barOpen1 { transform: translateY(7px) rotate(45deg); }
+.barOpen2 { opacity: 0; }
+.barOpen3 { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── MAIN ── */
+.main { flex: 1; padding-top: 64px; }
+
+/* ── FOOTER ── */
+.footer {
+  background: #13131A;
+  border-top: 1px solid #2A2A36;
+  padding: 48px 24px 24px;
+  margin-top: 80px;
+}
+.footerInner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #2A2A36;
+}
+.footerBrand { display: flex; flex-direction: column; gap: 12px; }
+.footerLogo { display: inline-flex; align-items: center; gap: 2px; }
+.footerTagline { font-size: 0.875rem; color: #B8B8C7; max-width: 260px; }
+.footerLinksLabel {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #B8B8C7; margin-bottom: 12px;
+}
+.footerLinks, .footerContact { display: flex; flex-direction: column; gap: 8px; }
+.footerLink { font-size: 0.875rem; color: #B8B8C7; text-decoration: none; transition: color 0.2s; }
+.footerLink:hover { color: #FFFFFF; }
+.footerMeta { font-size: 0.8rem; color: #707070; }
+.footerBottom {
+  max-width: 1200px; margin: 24px auto 0;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.8rem; color: #707070;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .nav {
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    flex-direction: column; align-items: stretch;
+    background: #13131A;
+    border-bottom: 1px solid #2A2A36;
+    padding: 12px 16px 20px;
+    gap: 4px;
+    transform: translateY(-110%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .navOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  .navLink { padding: 12px 16px; font-size: 1rem; }
+  .navLinkActive::after { bottom: 0; left: 16px; right: 16px; }
+
+  .footerInner { grid-template-columns: 1fr; gap: 32px; }
+  .footerBottom { flex-direction: column; gap: 8px; text-align: center; }
+}
