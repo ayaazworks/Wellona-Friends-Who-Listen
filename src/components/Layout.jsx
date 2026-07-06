@@ -1,6 +1,7 @@
 import { Outlet, NavLink, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import styles from './Layout.module.css'
+import logo from '../assets/logo.png' 
 
 const navLinks = [
   { to: '/', label: 'Home', exact: true },
@@ -31,9 +32,11 @@ export default function Layout() {
       {/* NAV */}
       <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
         <div className={styles.headerInner}>
+          
+          {/* LOGO SECTION UPDATED HERE */}
           <NavLink to="/" className={styles.logo}>
-            <span className={styles.logoW}>W</span>
-            <span className={styles.logoText}>ellona</span>
+            <img src={logo} alt="Wellona Logo" className={styles.logoImg}/>
+            <span className={styles.logoText}>Wellona</span>
           </NavLink>
 
           <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
@@ -74,10 +77,11 @@ export default function Layout() {
         <div className={styles.footerInner}>
           <div className={styles.footerBrand}>
             <span className={styles.footerLogo}>
-              <span className={styles.logoW}>W</span>
-              <span className={styles.logoText}>ellona</span>
+              {/* Optional: Add it to the footer logo section as well */}
+              <img src={logo} alt="Wellona Logo" className={styles.logoImg} />
+              <span className={styles.logoText}>Wellona</span>
             </span>
-            <p className={styles.footerTagline}>Personal Wellness. Meaningful Conversations.</p>
+            <p className={styles.footerTagline}>Friends Who Listen</p>
           </div>
 
           <div className={styles.footerLinks}>

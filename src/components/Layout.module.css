@@ -21,17 +21,30 @@
 }
 
 /* ── LOGO ── */
-.logo { display: flex; align-items: center; gap: 2px; text-decoration: none; }
-.logoW {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700; font-size: 1.5rem;
-  background: linear-gradient(135deg, #FF2BD6, #A43DFF, #2F8FFF);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds space between the logo image and the text "Wellona" */
+  text-decoration: none;
+}
+
+/* Style your logo image sizing */
+.logoImg {
+  height: 32px;  /* Adjust this height to scale perfectly with your navbar layout */
+  width: auto;   /* Keeps the aspect ratio intact */
+  object-fit: contain;
+}
+
+/* Make sure the footer brand matches layout style if you added it there too */
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .logoText {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700; font-size: 1.5rem; color: #FFFFFF;
+  margin-left: 0.5vw;
 }
 
 /* ── NAV ── */
